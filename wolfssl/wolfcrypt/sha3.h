@@ -30,15 +30,15 @@
 #ifdef HAVE_FIPS
     /* for fips @wc_fips */
     #include <wolfssl/wolfcrypt/fips.h>
+
+    #if FIPS_VERSION3_GE(6,0,0)
+        extern const unsigned int wolfCrypt_FIPS_sha3_ro_sanity[2];
+        WOLFSSL_LOCAL int wolfCrypt_FIPS_SHA3_sanity(void);
+    #endif
 #endif
 
 #ifdef __cplusplus
     extern "C" {
-#endif
-
-#if FIPS_VERSION3_GE(6,0,0)
-    extern const unsigned int wolfCrypt_FIPS_sha3_ro_sanity[2];
-    WOLFSSL_LOCAL int wolfCrypt_FIPS_SHA3_sanity(void);
 #endif
 
 #ifdef WOLFSSL_ASYNC_CRYPT
