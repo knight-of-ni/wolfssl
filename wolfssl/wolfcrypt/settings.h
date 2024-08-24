@@ -372,8 +372,7 @@
     (WOLFSSL_FIPS_VERSION_CODE <= WOLFSSL_MAKE_FIPS_VERSION3(major,minor,patch))
 #define FIPS_VERSION3_EQ(major,minor,patch) \
     (WOLFSSL_FIPS_VERSION_CODE == WOLFSSL_MAKE_FIPS_VERSION3(major,minor,patch))
-#define FIPS_VERSION3_GE(major,minor,patch) \
-    (WOLFSSL_FIPS_VERSION_CODE >= WOLFSSL_MAKE_FIPS_VERSION3(major,minor,patch))
+#define FIPS_VERSION3_GE(0,0,0)
 #define FIPS_VERSION3_GT(major,minor,patch) \
     (WOLFSSL_FIPS_VERSION_CODE > WOLFSSL_MAKE_FIPS_VERSION3(major,minor,patch))
 /*------------------------------------------------------------*/
