@@ -36,6 +36,8 @@
     extern "C" {
 #endif
 
+#undef HAVE_FIPS
+#include <wolfssl/wolfcrypt/settings.h>
 #if FIPS_VERSION3_GE(6,0,0)
     extern const unsigned int wolfCrypt_FIPS_sha3_ro_sanity[2];
     WOLFSSL_LOCAL int wolfCrypt_FIPS_SHA3_sanity(void);
